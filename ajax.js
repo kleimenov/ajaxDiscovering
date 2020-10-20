@@ -1,5 +1,5 @@
 //here I will get element by id
-const doc = document.getElementById('button');
+//const doc = document.getElementById('button');
 
 
 
@@ -12,8 +12,19 @@ const testFunction = () => {
 //create a handler function that will return text from ather file
 
 const loadText = () => {
+    //create XHR object
+    const xhr = new XMLHttpRequest();
+    //open function - type, url/file, async
+    xhr.open('GET', 'textExample.txt', true)
     
-}
+    
+    //check status
+    xhr.onload = () => {
+        if (this.status === 200) {
+
+        }
+    }
+};
 
 //lets check our event listener
 document.getElementById('testButton').addEventListener('click', testFunction)
