@@ -21,13 +21,16 @@ const loadText = () => {
     //check status
     xhr.onload = () => {
         if (this.status === 200) {
-
+            console.log(this.responseText);
         }
     }
+
+    //sends request
+    xhr.send()
 };
 
 //lets check our event listener
-document.getElementById('testButton').addEventListener('click', testFunction)
+//document.getElementById('testButton').addEventListener('click', testFunction)
 
 
 //create event listener (click will be event)
